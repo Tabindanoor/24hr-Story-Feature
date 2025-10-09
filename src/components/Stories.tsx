@@ -15,7 +15,6 @@ export default function Stories() {
   const [progress, setProgress] = useState<number[]>([]); // percentage progress for each story
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Load saved stories
   useEffect(() => {
     const savedStories: Story[] = JSON.parse(localStorage.getItem("stories") || "[]");
     const validStories = savedStories.filter(
@@ -26,7 +25,6 @@ export default function Stories() {
     localStorage.setItem("stories", JSON.stringify(validStories));
   }, []);
 
-  // Handle Upload
   const handleUpload = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -46,7 +44,6 @@ export default function Stories() {
     reader.readAsDataURL(file);
   };
 
-  // Handle story progress (3 seconds auto-play)
   useEffect(() => {
     if (currentIndex === null) return;
     setProgress((prev) => {
