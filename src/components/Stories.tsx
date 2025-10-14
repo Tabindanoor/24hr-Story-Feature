@@ -62,7 +62,7 @@ export default function Stories() {
       });
       if (progressValue >= 100) {
         clearInterval(intervalRef.current!);
-        handleNext(); // move to next story
+        handleNext();
       }
     }, 60);
 
