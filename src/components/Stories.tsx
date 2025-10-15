@@ -82,7 +82,6 @@ export default function Stories() {
     if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
   };
 
-  // Swipe handlers
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => handleNext(),
     onSwipedRight: () => handlePrev(),
@@ -92,9 +91,7 @@ export default function Stories() {
 
   return (
     <div className="w-full max-w-3xl mx-auto mt-6">
-      {/* Story Bar */}
       <div className="flex items-center gap-4 overflow-x-auto p-2">
-        {/* Add Story */}
         <label className="cursor-pointer flex flex-col items-center">
           <input type="file" accept="image/*" className="hidden" onChange={handleUpload} />
           <PlusCircleIcon className="w-14 h-14 text-blue-500 hover:text-blue-600" />
