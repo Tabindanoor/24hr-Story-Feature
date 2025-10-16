@@ -98,7 +98,6 @@ export default function Stories() {
           <span className="text-sm">Add Story</span>
         </label>
 
-        {/* Story Thumbnails */}
         {stories.map((story, idx) => (
           <div key={story.id} className="relative">
             <div
