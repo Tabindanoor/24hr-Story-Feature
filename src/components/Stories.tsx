@@ -118,13 +118,11 @@ export default function Stories() {
         ))}
       </div>
 
-      {/* Story Viewer */}
       {currentIndex !== null && (
         <div
           {...swipeHandlers}
           className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center z-50"
         >
-          {/* Progress bar at top */}
           <div className="absolute top-0 left-0 w-full flex space-x-1 p-2">
             {stories.map((_, i) => (
               <div
