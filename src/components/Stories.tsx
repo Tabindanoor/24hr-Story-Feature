@@ -107,7 +107,6 @@ export default function Stories() {
               <img src={story.image} alt="story" className="w-full h-full object-cover" />
             </div>
 
-            {/* Progress ring on thumbnail */}
             <div className="absolute -bottom-1 left-0 w-full h-1 bg-gray-300 rounded-full overflow-hidden">
               <div
                 className="h-1 bg-blue-500"
@@ -116,7 +115,7 @@ export default function Stories() {
             </div>
           </div>
         ))}
-      </div>
+      </div>t
 
       {currentIndex !== null && (
         <div
