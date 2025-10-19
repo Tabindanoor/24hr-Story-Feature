@@ -149,11 +149,11 @@ export default function Stories() {
             ✕
           </button>
 
-          <img
+          {/* <img
             src={stories[currentIndex].image}
             alt="story"
             className="max-h-[80vh] max-w-[90vw] rounded-lg"
-          />
+          /> */}
         </div>
       )}
     </div>
