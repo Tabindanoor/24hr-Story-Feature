@@ -142,12 +142,12 @@ export default function Stories() {
             ))}
           </div>
 
-          <button
+          {/* <button
             onClick={() => setCurrentIndex(null)}
             className="absolute top-4 right-6 text-white text-xl"
           >
             ✕
-          </button>
+          </button> */}
 
           {/* <img
             src={stories[currentIndex].image}
