@@ -142,7 +142,7 @@ export default function Stories() {
             ))}
           </div>
 
-          {/* <button
+          <button
             onClick={() => setCurrentIndex(null)}
             className="absolute top-4 right-6 text-white text-xl"
           >
@@ -153,7 +153,7 @@ export default function Stories() {
             src={stories[currentIndex].image}
             alt="story"
             className="max-h-[80vh] max-w-[90vw] rounded-lg"
-          /> */}
+          />
         </div>
       )}
     </div>
