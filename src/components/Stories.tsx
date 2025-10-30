@@ -71,16 +71,16 @@ export default function Stories() {
     };
   }, [currentIndex]);
 
-  const handleNext = () => {
-    if (currentIndex === null) return;
-    if (currentIndex < stories.length - 1) setCurrentIndex(currentIndex + 1);
-    else setCurrentIndex(null);
-  };
+  // const handleNext = () => {
+  //   if (currentIndex === null) return;
+  //   if (currentIndex < stories.length - 1) setCurrentIndex(currentIndex + 1);
+  //   else setCurrentIndex(null);
+  // };
 
-  const handlePrev = () => {
-    if (currentIndex === null) return;
-    if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
-  };
+  // const handlePrev = () => {
+  //   if (currentIndex === null) return;
+  //   if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
+  // };
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => handleNext(),
