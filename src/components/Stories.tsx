@@ -82,12 +82,12 @@ export default function Stories() {
     if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
   };
 
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: () => handleNext(),
-    onSwipedRight: () => handlePrev(),
-    preventScrollOnSwipe: true,
-    trackMouse: true,
-  });
+  // const swipeHandlers = useSwipeable({
+  //   onSwipedLeft: () => handleNext(),
+  //   onSwipedRight: () => handlePrev(),
+  //   preventScrollOnSwipe: true,
+  //   trackMouse: true,
+  // });
 
   return (
     <div className="w-full max-w-3xl mx-auto mt-6">
