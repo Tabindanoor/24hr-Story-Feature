@@ -54,7 +54,7 @@ export default function Stories() {
 
     let progressValue = 0;
     intervalRef.current = setInterval(() => {
-      progressValue += 2; // 2% every 60ms ≈ 3s total
+      progressValue += 2; 
       setProgress((prev) => {
         const updated = [...prev];
         updated[currentIndex!] = progressValue;
