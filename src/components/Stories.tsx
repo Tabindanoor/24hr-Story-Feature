@@ -52,19 +52,19 @@ export default function Stories() {
       return updated;
     });
 
-    // let progressValue = 0;
-    // intervalRef.current = setInterval(() => {
-    //   progressValue += 2; 
-    //   setProgress((prev) => {
-    //     const updated = [...prev];
-    //     updated[currentIndex!] = progressValue;
-    //     return updated;
-    //   });
-    //   if (progressValue >= 100) {
-    //     clearInterval(intervalRef.current!);
-    //     handleNext();
-    //   }
-    // }, 60);
+    let progressValue = 0;
+    intervalRef.current = setInterval(() => {
+      progressValue += 2; 
+      setProgress((prev) => {
+        const updated = [...prev];
+        updated[currentIndex!] = progressValue;
+        return updated;
+      });
+      if (progressValue >= 100) {
+        clearInterval(intervalRef.current!);
+        handleNext();
+      }
+    }, 60);
 
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
