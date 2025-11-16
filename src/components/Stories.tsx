@@ -9,21 +9,21 @@ interface Story {
   timestamp: number;
 }
 
-export default function Stories() {
-  const [stories, setStories] = useState<Story[]>([]);
-  const [currentIndex, setCurrentIndex] = useState<number | null>(null);
-  const [progress, setProgress] = useState<number[]>([]);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+// export default function Stories() {
+//   const [stories, setStories] = useState<Story[]>([]);
+//   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+//   const [progress, setProgress] = useState<number[]>([]);
+//   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    const savedStories: Story[] = JSON.parse(localStorage.getItem("stories") || "[]");
-    const validStories = savedStories.filter(
-      (s) => Date.now() - s.timestamp < 24 * 60 * 60 * 1000
-    );
-    setStories(validStories);
-    setProgress(new Array(validStories.length).fill(0));
-    localStorage.setItem("stories", JSON.stringify(validStories));
-  }, []);
+//   useEffect(() => {
+//     const savedStories: Story[] = JSON.parse(localStorage.getItem("stories") || "[]");
+//     const validStories = savedStories.filter(
+//       (s) => Date.now() - s.timestamp < 24 * 60 * 60 * 1000
+//     );
+//     setStories(validStories);
+//     setProgress(new Array(validStories.length).fill(0));
+//     localStorage.setItem("stories", JSON.stringify(validStories));
+//   }, []);
 
   const handleUpload = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
