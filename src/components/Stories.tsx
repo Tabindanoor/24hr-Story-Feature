@@ -10,10 +10,10 @@ interface Story {
 }
 
 export default function Stories() {
-  const [stories, setStories] = useState<Story[]>([]);
-  const [currentIndex, setCurrentIndex] = useState<number | null>(null);
-  const [progress, setProgress] = useState<number[]>([]);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  // const [stories, setStories] = useState<Story[]>([]);
+  // const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+  // const [progress, setProgress] = useState<number[]>([]);
+  // const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const savedStories: Story[] = JSON.parse(localStorage.getItem("stories") || "[]");
